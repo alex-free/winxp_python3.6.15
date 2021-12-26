@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WinXP Python3.6.15</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body style="background-color:black; color:white;" link="#58D3F7" alink="#FF00FF" vlink="#58D3F7">
+
+<h1>Python 3.6.15 For Windows XP SP3</h1>
+
+<p>WinXP_Python-3.6.15 is the latest version of <a href=https://www.python.org/downloads/>Python 3.6.x</a> (3.6.15 as of 12/24/2021) <b>and is compatible with Windows XP SP3 32-bit systems</b>. The last official Python version for Windows XP is Python 3.4, so by using WinXP_Python-3.6 you have access to many more Python applications then ever before on Windows XP SP3.</p>
+
+<h2>Table Of Contents</h2>
+<ul><li><a href="#downloads">Downloads</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+
+<a name=downloads><h2>Downloads</h2></a>
+
+<a name=latest><h3>WinXP_Python 3.6.15-1 - 12/26/2021</h3>
+
+<a href=https://github.com/alex-free/winxp_python3.6.15/archive/refs/tags/3.6.15-1.zip>WinXP_Python-3.6.15-1 source</a>
+
+<p><code>git clone https://github.com/alex-free/winxp_python3.6.15</code></p>
+
+<a name=building><h2>Building</h2></a>
+
+<p>WinXP_Python-3.6.15 requires the last compatible Cygwin for Windows XP SP3 to be installed <a href=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/setup/snapshots/setup-x86-2.874.exe>(32-bit)</a> <a href=http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/setup/snapshots/setup-x86_64-2.874.exe>(64-bit)</a>.</p>
+
+<h3>Start Cygwin Setup</h3>
+<p>Run the setup exe from <code>cmd.exe</code> with the <code>-X</code> flag:</p>
+
+<p>32-bit: <pre><code>setup-x86-2.874.exe -X</code></pre></p>
+<p>64-bit: <pre><code>setup-x86_64-2.874.exe -X</code></pre></p>
+
+<h3>Add The Windows XP SP3 Compatible Repo</h3>
+
+<p>32-bit: <pre><code>http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/2016/08/30/104223</code></pre></p>
+<p>64-bit: <pre><code>http://ctm.crouchingtigerhiddenfruitbat.org/pub/cygwin/circa/64bit/2016/08/30/104235
+</code></pre></p>
+
+<h3>Install Dependencies & Compile</h3>
+<p>Install all of the devel packages using the Cygwin Setup. Then start the Cygwin Terminal. Cd into the winxp_python-3.6.15-1 directory, and <code>./configure && make install </code> like you do building any other Python release.</p>
+
+<p>After doing a <code>make install</code>, you need to 'rebaseall' to fix some ugly warnings when using Python3.6.exe. To do so:<p>
+
+<ul><li>In the Cygwin Terminal, do: <pre><code>find /usr/local -type f -name "*.dll" > /tmp/rebase-list</code></pre></li> 
+
+<li>Close the Cygwin Terminal and all other Cygwin programs.</li>
+
+<li>Open cmd.exe and do: <pre><code>cd C:\cygwin\bin && C:\cygwin\bin\ash.exe C:\cygwin\bin\rebaseall -T C:\cygwin\tmp\rebase-list && del C:\cygwin\tmp\rebase-list</code></pre></li></ul>
+
+<h2><a name=credits>Credits</a></h2>
+
+<p>WinXP_Python-3.6 is based off of this <a href=https://its201.com/article/mengyoufengyu/53142863>website posting</a>. I used it as a guide, and then did some additional modifications of my own to the Python 3.6.15 source code to get everything working.</p>
+
+<h2><a name=license>License</a></h2>
+
+<p>Python 3.6.15 is released under the 'CWI LICENSE AGREEMENT', which is the file <code>LICENSE</code> in the source directory.</p>
+
+</html>
